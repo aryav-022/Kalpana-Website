@@ -26,3 +26,12 @@ Having a proper and efficient file structure is very important while working on 
 All files returning a component should have a ```.jsx``` extension rather than a ```.js``` extension
 
 In case you encounter any difficulties while working on an issue, feel free to reach out to us or your peers for assistance.
+
+## Design
+
+The design for this website is made on figma and can be accessed on the given link:
+
+https://www.figma.com/file/Kpyb8Rx3JRWSLHB6SPSemL/Design-Systems
+
+Although the design is somewhat finalized, you can still make changes to it without deleting/modifying the current design.
+For this you need to follow this link and login through your id on figma. There, ask for permission to contribute in the design. After you are given permission, you will be able to contribute to the design.
