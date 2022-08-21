@@ -5,7 +5,7 @@
 Before starting your work, make sure to drop a comment on the issue you wish to work on so that we can assign it to you. In general, we follow the "fork-and-pull" Git workflow.
 
 1. Fork the repo on GitHub
-2. Clone the project to your own machine
+2. Clone the project to your own machine from the development branch (the development branch will always be updated first)
 3. Commit changes to your own branch
 4. Push your work back up to your fork
 5. Submit a Pull request so that we can review your changes
