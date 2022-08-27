@@ -2,15 +2,19 @@ import React from 'react'
 import styles from "./Blogs.module.css";
 import { Link } from 'react-router-dom';
 
-export default function BlogCard({blog}) {
+export default function BlogCard(props) {
   return (
-    <Link to={`/blogs/${blog.id}`}>
-      <div className={styles.blogCard} key={blog.id}>
+    <Link to={`/blogs/${props.blog.id}`} data-heading={props.blog.heading} data-date={props.blog.date}>
+      <div className={styles.blogCard}>
         <div className={styles.verticalContainer}>
-          <div className={styles.cardHeading}>{blog.heading}</div>
-          <div className={styles.cardContent}>{blog.content}</div>
+          <div className={styles.cardHeading}>{props.blog.heading}</div>
+          <div className={styles.cardContent}>
+            {
+              props.blog.content.length > 99 ? props.blog.content.substring(0, 99) + "..." : props.blog.content
+            }
+          </div>
         </div>
-        <img src={blog.image} alt="" className={styles.cardImage} />
+        <img src={props.blog.image} alt="" className={styles.cardImage} />
       </div>
     </Link>
   )

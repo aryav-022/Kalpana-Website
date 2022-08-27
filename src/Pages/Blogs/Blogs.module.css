@@ -51,13 +51,14 @@
 
 .cardHeading {
     font-size: 32px;
-    max-width: 60%;
+    max-width: 80%;
     font-weight: bold;
 }
 
 .cardContent {
     font-size: 18px;
     max-width: fit-content;
+    padding-right: 15px;
 }
 
 .cardImage {
@@ -76,8 +77,55 @@
     opacity: 0;
 }
 
-@media screen and (max-widht: 810px) {
+.searchWrapper {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    gap: 5px;
+}
+
+.searchWrapper * {
+    display: inline-block;
+    min-width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-light-color);
+    color: var(--primary-text-color);
+    background-color: var(--primary-dark-color);
+    padding: 10px;
+}
+
+.searchInput {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 810px) {
     .horizontalRule {
         display: none;
+    }
+    .searchWrapper * {
+        border: 1px solid var(--primary-light-color);
+    }
+    .blogCard {
+        height: 260px;
+        width: 260px;
+    }
+    .cardHeading {
+        font-size: 28px;
+    }
+    .cardContent {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .searchWrapper{
+        width: 280px;
+    }
+    .dateInput {
+        width: 100%;
     }
 }
