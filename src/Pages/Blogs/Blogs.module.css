@@ -1,0 +1,83 @@
+.blogsPage {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.horizontalRule {
+    height: 3px;
+    width: 90%;
+    background-color: var(--primary-light-color);
+    margin: 50px auto;
+}
+
+.heading {
+    font-size: 32px;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin: 50px auto;
+}
+
+.blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    width: 90%;
+    margin: auto;
+    gap: 30px;
+}
+
+.blogCard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 270px;
+    width: 310px;
+    padding-left: 15px;
+    background: linear-gradient(to right, var(--primary-dark-color) 50%, transparent);
+    border-radius: 7px;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+}
+
+.verticalContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.cardHeading {
+    font-size: 32px;
+    max-width: 60%;
+    font-weight: bold;
+}
+
+.cardContent {
+    font-size: 18px;
+    max-width: fit-content;
+}
+
+.cardImage {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: opacity 200ms ease-in-out;
+    z-index: -10;
+    opacity: 0.7;
+}
+
+.blogCard:hover .cardImage {
+    opacity: 0;
+}
+
+@media screen and (max-widht: 810px) {
+    .horizontalRule {
+        display: none;
+    }
+}
