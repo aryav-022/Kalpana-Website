@@ -36,6 +36,9 @@ section {
     /* background-color: var(--accent-light); */
     margin: 0 auto;
     width: min(95%, 85rem);
+}
+
+#banner{
     height: 50rem;
 }
 
@@ -96,9 +99,19 @@ section {
     padding-top: 0.7em;
 }
 
+#sectionContainer
+{
+    width: 100%;
+    background-color: var(--primary-light);
+}
+
+#achievementSection{
+    height: 100rem;
+}
+
 @media only screen and (max-width: 1200px) {
 
-    section {
+    #banner {
         height: 35rem;
     }
 
@@ -129,7 +142,7 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-    section {
+    #banner {
         height: 30rem;
     }
 
@@ -161,31 +174,7 @@ section {
 
 @media only screen and (max-width: 600px) {
     
-    section{
-        height: 28rem;
-    }
-    
-    .years {
-        font-size: 1.6em;
-        width: 20%;
-        height: 16rem;
-        justify-content: space-between;
-    }
-    
-    .bannerContent>h3{
-        font-size: 1.5em;
-        font-weight: 200;
-    }
-
-    .bannerContent>h2{
-        padding-top: 3em;
-        font-size: 2.5em;
-    }
-}
-
-@media only screen and (max-width: 450px)
-{
-    section{
+    #banner{
         height: 35rem;
         text-align: center;
     }
@@ -211,6 +200,13 @@ section {
 
     .bannerContent>h2{
         padding-top: 1em;
+        font-size: 2.6em;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    .bannerContent>h2{
         font-size: 2.1em;
     }
 }

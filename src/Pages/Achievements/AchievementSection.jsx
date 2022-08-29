@@ -1,9 +1,11 @@
 const AchievementSection = () => {
-    return ( 
-    <section>
-        <h1>hi</h1>
-    </section> 
+    return (
+        <div id="sectionContainer">
+            <section id="achievementSection">
+                hi
+            </section>
+        </div>
     );
 }
- 
+
 export default AchievementSection;
