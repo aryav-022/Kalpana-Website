@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+div.navb{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,7 +11,7 @@ div.navb {
     top: 0;
     z-index: 100;
 }
-nav{
+.navbar{
   display: flex;
   height: 150px;
   width: 100%;
@@ -21,20 +21,20 @@ nav{
   padding: 1rem;
   flex-wrap: wrap;
 }
-nav .logo{
+.navbar .logo{
   color: #fff;
   font-size: 30px;
   font-weight: 500;
 }
-nav ul{
+.navbar ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li{
+.navbar ul li{
   margin: 0 5px;
 }
-nav ul li a{
+.navbar ul li a{
   color: #f2f2f2;
   text-decoration: none;
   font-size: 18px;
@@ -44,12 +44,12 @@ nav ul li a{
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
-nav ul li a.active,
-nav ul li a:hover{
+.navbar ul li a.active,
+.navbar ul li a:hover{
   color: #111;
   background: #fff;
 }
-nav .menu-btn i{
+.navbar .menu_btn i{
   color: #fff;
   font-size: 22px;
   cursor: pointer;
@@ -63,12 +63,12 @@ input[type="checkbox"]{
     display: none;
 }
 @media (max-width: 1200px){
-  nav{
+  .navbar{
     padding: 0 40px 0 50px;
   }
 }
 @media (max-width: 1100px) {
-  nav .menu-btn {
+  .navbar .menu_btn {
     padding: 20px;
     border-radius: 50%;
   }
@@ -77,7 +77,7 @@ input[type="checkbox"]{
     display: block;
     font-size: 22px;
   }
-  #click:checked ~ .menu-btn{
+  .click:checked ~ .menu_btn{
     content: "\f00d";
     background-color: white;
     padding: 20px;
@@ -86,10 +86,10 @@ input[type="checkbox"]{
     transition: all 0.3s ease-in-out;
     
   }
-  #click:checked ~ .menu-btn .fas {
+  .click:checked ~ .menu_btn .fas {
     color: #1b1b1b;
  }
-  nav ul{
+  .navbar ul{
     position: fixed;
     top: 150px;
     left: -100%;
@@ -100,25 +100,25 @@ input[type="checkbox"]{
     display: block;
     transition: all 0.3s ease;
   }
-  #click:checked ~ ul{
+  .click:checked ~ ul{
     left: 0;
   }
-  nav ul li{
+  .navbar ul li{
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+  .navbar ul li a{
     width: 100%;
     margin-left: -100%;
     display: block;
     font-size: 20px;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #click:checked ~ ul li a{
+  .click:checked ~ ul li a{
     margin-left: 0px;
   }
-  nav ul li a.active,
-  nav ul li a:hover{
+  .navbar ul li a.active,
+  .navbar ul li a:hover{
     background: none;
     color: cyan;
   }
@@ -140,7 +140,7 @@ input[type="checkbox"]{
 }
 
 @media (max-width: 550px) {
-    .nav-title {
+    .nav_title {
         display: none;
     }
 }
