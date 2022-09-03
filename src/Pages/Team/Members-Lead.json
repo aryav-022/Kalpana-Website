@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1 ,
+        "href":"#preview-1",
+        "img": "../../Assets/Images/img/1.jpg",
+        "por":"Vice Pres.",
+        "name":"Vandit",
+        "box_deco":"&#10115;",
+        "box_tagline":""
+    },
+    {
+        "id": 2 ,
+        "href":"#preview-2",
+        "img": "../../Assets/Images/img/2.jpg",
+        "por":"President",
+        "name":"Alankriti",
+        "box_deco":"&#10014;",
+        "box_tagline":""
+    },
+    {
+        "id": 3 ,
+        "href":"#preview-3",
+        "img": "../../Assets/Images/img/3.jpg",
+        "por":"Vice Pres.",
+        "name":"Tushar",
+        "box_deco":"&#10032;",
+        "box_tagline":"Call it a hurricane or call it freedom, Frank"
+    }
+]
