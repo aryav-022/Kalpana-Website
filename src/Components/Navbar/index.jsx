@@ -7,13 +7,16 @@ import logo from '../../Assets/Logo/kalpanacaps.png';
 
 export default function index() {
   
-  const Checking = useRef(null);
+  // const Checking = useRef(null);
+  // useEffect(() => {
+  //   const uncheck = () => {
+  //     Checking.current.checked = false;
+  // };
+  // }) 
 
-  useEffect(() => {
-    const uncheck = () => {
-      Checking.current.checked = false;
-  };
-  })
+  const uncheck = (req, res) => {
+        console.log(req.body.click)
+    };
   
   return (
     <div className={styles.navb}>
@@ -22,7 +25,7 @@ export default function index() {
           <img src={logo} alt="logo" style={{width:'100px'}} />
             <p className={styles.nav_title}>Team Kalpana</p>
          </div>
-         <input ref={Checking} type="checkbox" id="click" className={styles.click} />
+         <input type="checkbox" id="click" className={styles.click} />
          <label for="click" className={styles.menu_btn}>
          {/* <i class="fas fa-bars"></i> */}
           <BsFillMenuButtonWideFill className={styles.fas}/>
