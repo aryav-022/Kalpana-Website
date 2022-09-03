@@ -5,20 +5,20 @@ div.navb{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
-div.navb {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+ /* div.navb { */
+    /* position: -webkit-sticky; Safari */
+    /* position: sticky;
     top: 0;
     z-index: 100;
-}
+} */
 .navbar{
   display: flex;
-  height: 150px;
+  height: 100px;
   width: 100%;
   background: #1b1b1b;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 10px;
   flex-wrap: wrap;
 }
 .navbar .logo{
