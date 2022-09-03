@@ -38,7 +38,7 @@ export default function Navbar() {
           <BsFillMenuButtonWideFill className={styles.fas}/>
          </label>
          <ul ref={NavLinksContainer}>
-            <li><Link to="">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/team">Team</Link></li>
             <li><Link to="/achievements">Achievements</Link></li>
             <li><Link to="/sponsors">Sponsors</Link></li>
