@@ -51,7 +51,7 @@ html {
     width: 40vw;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1100px){
     .hero {
         height: 70vh;
     }
@@ -172,7 +172,7 @@ html {
     content: "";
     display: block; 
     margin: 0 auto; 
-    width: 20vw; 
+    width: 20%; 
     padding-top: 10px; 
     border-bottom: 4px solid #00979E;
 }

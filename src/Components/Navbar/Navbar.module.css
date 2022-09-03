@@ -5,12 +5,12 @@ div.navb{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
- /* div.navb { */
-    /* position: -webkit-sticky; Safari */
-    /* position: sticky;
+ div.navb {
+     /* position: -webkit-sticky;  */
+     position: sticky;
     top: 0;
     z-index: 100;
-} */
+}
 .navbar{
   display: flex;
   height: 100px;
@@ -91,7 +91,7 @@ input[type="checkbox"]{
  }
   .navbar ul{
     position: fixed;
-    top: 150px;
+    top: 100px;
     left: -100%;
     background: #111;
     height: 100vh;
