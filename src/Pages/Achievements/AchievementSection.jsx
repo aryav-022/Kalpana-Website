@@ -1,9 +1,20 @@
+import Banner from "../../Components/Banner/Banner";
+import { useState } from "react";
+import achievements from './Achievements.json'
+
 const AchievementSection = () => {
+
+    const [Achievements, setAchievements] = useState(achievements);
+
+    const setActiveYear = (year) => {
+        const newAchievements = achievements.filter(Achievement => Achievement.year === year);
+        setAchievements(newAchievements);
+    }
+
     return (
-        <div id="sectionContainer">
-            <section id="achievementSection">
-                hi
-            </section>
+        <div>
+           <Banner title="Our Achievements" setActiveYear = {setActiveYear}/>
+           
         </div>
     );
 }
