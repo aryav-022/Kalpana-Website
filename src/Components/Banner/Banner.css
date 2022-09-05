@@ -52,15 +52,15 @@ section {
     font-weight: 600;
 }
 
-.years>a {
+.years>div {
     color: var(--tertiary-text-color);
 }
 
-.years>a:hover {
+.years>div:hover {
     color: var(--primary-text-color);
 }
 
-.years>a:first-of-type {
+.years>div:first-of-type {
     color: var(--primary-text-color);
 }
 

@@ -16,7 +16,7 @@ const AchievementSection = () => {
 
     return (
         <div>
-           <Banner title="Our Achievements" setActiveYear = {setActiveYear}/>
+           <Banner title="Our Achievements" setActiveYear = {setActiveYear} />
            <div id="achSectionContainer">
             <section id="achSection">
                 {Achievements.map(Achievement => <AchievementCard Achievement = {Achievement} key = {Achievement.id} img = {Achievement.coverphoto}/>)}

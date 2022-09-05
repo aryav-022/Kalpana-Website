@@ -6,11 +6,11 @@ const Banner = (props) => {
             <div className="bannerContainer">
                 <div className="years">
                     {/*Pass a function "setActiveYear" which takes argument and modifies content based on year.*/}
-                    <a href="#achSectionContainer" onClick={() => props.setActiveYear(2022)} id="2022">2022</a>
-                    <a href="#achSectionContainer" onClick={() => props.setActiveYear(2021)}>2021</a>
-                    <a href="#achSectionContainer" onClick={() => props.setActiveYear(2020)}>2020</a>
-                    <a href="#achSectionContainer" onClick={() => props.setActiveYear(2019)}>2019</a>
-                    <a href="#achSectionContainer" onClick={() => props.setActiveYear(2018)}>2018</a>
+                    <div className="bannerLink" id="2022" onClick={() => props.setActiveYear(2022)}>2022</div>
+                    <div className="bannerLink" onClick={() => props.setActiveYear(2021)}>2021</div>
+                    <div className="bannerLink" onClick={() => props.setActiveYear(2020)}>2020</div>
+                    <div className="bannerLink" onClick={() => props.setActiveYear(2019)}>2019</div>
+                    <div className="bannerLink" onClick={() => props.setActiveYear(2018)}>2018</div>
                 </div>
                 <div className="bannerContent">
                     <h3>TEAM KALPANA</h3>
