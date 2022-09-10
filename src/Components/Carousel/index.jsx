@@ -71,7 +71,7 @@ export default function Carousel(props) {
     let interval = null;
 
     function startInterval() {
-      setInterval(() => {
+      interval = setInterval(() => {
         next(1);
       }, 7000);
     }

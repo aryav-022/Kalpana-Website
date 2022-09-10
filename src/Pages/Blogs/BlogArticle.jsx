@@ -7,6 +7,8 @@ export default function BlogArticle() {
   const { id } = useParams();
   const blog = blogs.filter(blog => {return blog.id.toString() === id})[0];
 
+  window.scrollTo(0,0);
+
   return (
     <section className={styles.blogArticleSection}>
       <img src={blog.image} alt="" className={styles.blogImage} />
