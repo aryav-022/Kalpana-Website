@@ -57,7 +57,7 @@ section {
 }
 
 .years>div:hover {
-    color: var(--primary-text-color);
+    color: var(--primary-text-color) !important;
 }
 
 .years>div:first-of-type {
