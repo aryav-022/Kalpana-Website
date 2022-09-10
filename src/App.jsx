@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import { Home, Team, Achievements, Blogs, Sponsors } from "./Pages";
 import BlogArticle from "./Pages/Blogs/BlogArticle";
 
+
 export default function App() {
     return (
         <div className="App">
