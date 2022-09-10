@@ -68,29 +68,25 @@ export default function Carousel(props) {
     })
     
     // Automatic Slide
-    let interval = setInterval(() => {
-      next(1);
-    }, 7000);
-    
-    carouselSlide.current.addEventListener('mouseover', () => {
-      clearInterval(interval);
-    })
-    
-    carouselSlide.current.addEventListener('mouseleave', () => {
-      interval = setInterval(() => {
+    let interval = null;
+
+    function startInterval() {
+      setInterval(() => {
         next(1);
       }, 7000);
-    })
+    }
     
-    carouselMeter.current.addEventListener('mouseover', () => {
-      clearInterval(interval);
-    })
+    nextBtn.current.addEventListener('mouseover', () => clearInterval(interval));
+    nextBtn.current.addEventListener('mouseleave', startInterval);
     
-    carouselMeter.current.addEventListener('mouseleave', () => {
-      interval = setInterval(() => {
-        next(1);
-      }, 7000);
-    })
+    prevBtn.current.addEventListener('mouseover', () => clearInterval(interval));
+    prevBtn.current.addEventListener('mouseleave', startInterval);
+    
+    carouselSlide.current.addEventListener('mouseover', () => clearInterval(interval));
+    carouselSlide.current.addEventListener('mouseleave', startInterval);
+    
+    carouselMeter.current.addEventListener('mouseover', () => clearInterval(interval));
+    carouselMeter.current.addEventListener('mouseleave', startInterval);
   })
 
   return (
