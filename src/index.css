@@ -32,9 +32,3 @@ code {
 body {
   background-color: var(--secondary-dark-color);
 }
-
-.bottomRule {
-  width: 150px;
-  height: 3px;
-  background-color: var(--primary-light-color);
-}
