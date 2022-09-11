@@ -24,13 +24,14 @@ section {
     width: min(95%, 85rem);
 }
 
-#banner{
+/* #banner{
     height: 50rem;
-}
+} */
 
 .bannerContainer {
     height: 100%;
     margin: 0 auto;
+    padding: 10em 0;
     width: min(100%, 75rem);
 
     display: flex;
@@ -58,6 +59,7 @@ section {
 
 .years>div:hover {
     color: var(--primary-text-color) !important;
+    cursor: pointer;
 }
 
 .years>div:first-of-type {
@@ -100,11 +102,9 @@ section {
 
 @media only screen and (max-width: 1200px) {
 
-    #banner {
-        height: 35rem;
-    }
 
     .bannerContainer {
+        padding: 8em 0;
         justify-content: space-evenly;
         width: 90%;
     }
@@ -132,11 +132,8 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-    #banner {
-        height: 30rem;
-    }
-
     .bannerContainer {
+        padding: 8em 0;
         justify-content: space-around;
         width: 100%;
     }
@@ -165,11 +162,11 @@ section {
 @media only screen and (max-width: 600px) {
     
     #banner{
-        height: 35rem;
         text-align: center;
     }
 
     .bannerContainer {
+        padding: 3em 0;
         flex-direction: column-reverse;
         justify-content: space-evenly;
         width: 100%;
