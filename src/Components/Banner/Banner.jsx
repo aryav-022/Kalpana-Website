@@ -3,6 +3,7 @@ import { useRef } from 'react';
 
 const Banner = (props) => {
     const BannerLinks = useRef(null);
+    const BannerEnd = useRef(null);
 
     function setActiveYear(year) {
         props.setYear(year);
@@ -11,6 +12,8 @@ const Banner = (props) => {
             bannerLink.style.color = 'var(--tertiary-text-color)';
             if (bannerLink.id === year.toString()) bannerLink.style.color = 'var(--primary-text-color)';
         })
+        // BannerEnd.current.scrollIntoView();
+        window.scrollTo(0, BannerEnd.current.offsetTop-100);
     }
 
     return (
@@ -30,6 +33,7 @@ const Banner = (props) => {
                     <h2>{props.title}</h2>
                 </div>
             </div>
+            <div ref={BannerEnd}></div>
         </section>
     );
 }
