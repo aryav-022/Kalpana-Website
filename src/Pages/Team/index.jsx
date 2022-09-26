@@ -3,7 +3,6 @@ import styles from "./Team.module.css"
 import Card from './Card'
 import Banner from '../Achievements/Banner'
 
-import css_data from './css_data.json'
 import Members_Lead from './Members-Lead.json'
 import Members_UAS from './Members_UAS.json'
 
