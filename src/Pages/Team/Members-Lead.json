@@ -1,39 +1,30 @@
 [
     {
-        "id": 1 ,
+        "id": 0 ,
         "href":"#preview-1",
         "img": "1.jpg",
-        "por":"Vice Pres.",
+        "por":"Vice Presi.",
         "name":"Vandit",
         "box_deco":"➃",
-        "box_tagline":"",
-        "title_css":"`${styles.box__title}`",
-        "text_css":"${styles.box__text} ${styles.box__text__closer}",
-        "deco_css":"styles.box__deco"
+        "box_tagline":""
     },
     {
-        "id": 2 ,
+        "id": 1 ,
         "href":"#preview-2",
         "img": "2.jpg",
         "por":"President",
         "name":"Alankriti",
         "box_deco":"✞",
-        "box_tagline":"",
-        "title_css":"${styles.box__title} ${styles.box__title__straight} ${styles.box__title__bottom}",
-        "text_css":"styles.box__text",
-        "deco_css":"`${styles.box__deco} ${styles.box__deco__top}`"
+        "box_tagline":""
     },
     {
-        "id": 3 ,
+        "id": 2 ,
         "href":"#preview-3",
         "img": "3.jpg",
-        "por":"Vice Pres.",
+        "por":"Vice Presi.",
         "name":"Tushar",
         "box_deco":"✰",
-        "box_tagline":"Call it a hurricane or call it freedom, Frank",
-        "title_css":"styles.box__title",
-        "text_css":"`${styles.box__text} ${styles.box__text__closer}`",
-        "deco_css":"styles.box__deco"
+        "box_tagline":"Call it a hurricane or call it freedom, Frank"
     }
 ]
 
