@@ -26,10 +26,6 @@ export default function index() {
                   box_deco={member.box_deco}
                   box_tagline={member.box_tagline}
 
-                  box_title_css={css_data[member.id].title_css}
-                  box_text_css={css_data[member.id].text_css}
-                  box_deco_css={css_data[member.id].deco_css}
-                  box_text_inner_css={styles.box__text_inner}
                 />
               )
             })}
@@ -50,10 +46,6 @@ export default function index() {
                   box_deco={member.box_deco}
                   box_tagline={member.box_tagline}
 
-                  box_title_css={css_data[member.id].title_css}
-                  box_text_css={css_data[member.id].text_css}
-                  box_deco_css={css_data[member.id].deco_css}
-                  box_text_inner_css={styles.box__text_inner}
                 />
               )
             })}   
