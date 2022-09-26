@@ -38,7 +38,6 @@ export default function BlogsContainer() {
 
     searchInp.current.addEventListener("input", e => { searchInBlogsByText(e.target.value.toLowerCase()); });
     dateInp.current.addEventListener("input", e => { searchInBlogsByDate(e.target.value); });
-    
   }, [])
 
   return (
