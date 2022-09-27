@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Team.module.css"
 import Card from './Card'
-import Banner from '../Achievements/Banner'
+import Banner from '../../Components/Banner/Banner'
 
 import Members_Lead from './Members-Lead.json'
 import Members_UAS from './Members_UAS.json'
@@ -9,9 +9,12 @@ import Members_UAS from './Members_UAS.json'
 export default function index() {
   return (
     <>
-      <Banner/>
+      <div className={styles.team__heading}><h1 >MEET THE TEAM</h1></div>
+      {/* <Banner
+        title="OUR TEAM"
+      /> */}
       <div className={styles.content}>
-          <div className={styles.team_head}><h1 >TEAM LEADS</h1></div>
+          <div className={styles.team__head}><h1 >TEAM LEADS</h1></div>
           <div className={styles.grid}>
             {Members_Lead.map(member => {
               return(
@@ -32,7 +35,7 @@ export default function index() {
       </div>
 
       <div className={styles.content}>
-          <div className={styles.team_head}><h1 >TEAM LEADS</h1></div>
+          <div className={styles.team__head}><h1 >TEAM LEADS</h1></div>
             <div className={styles.grid}>
             {Members_UAS.map(member => {
               return(
