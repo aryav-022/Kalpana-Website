@@ -1,27 +1,33 @@
 import React from 'react'
-import styles from "./Team.module.css";
+import styles from './Team.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram, faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
 
 const card = (props) => {
   const img = require(`../../Assets/Images/img/${props.img}`);
 
-  function stringToCssClassname(s)
-  {
-    var css = "";
-    s.split(" ").forEach(element => { css += " "+styles[element] });
-    return css;
-  }
+  // function stringToCssClassname(s)
+  // {
+  //   var css = "";
+  //   s.split(" ").forEach(element => { css += " "+styles[element] });
+  //   return css;
+  // }
 
   return (
-    <a className={styles.grid__item} href={props.href}>
-        <div className={styles.box}>
-            <div className={styles.box__shadow}></div>
-            <img className={styles.box__img} src={img} alt=""/>
-            <h3 className={`${styles.box__title} ${styles.box__title__straight} ${styles.box__title__bottom}`}><span className={styles.box__title_inner} data-hover={props.box_title}>{props.box_title}</span></h3>
-            <h4 className={styles.box__text}><span className={styles.box__text_inner}>{props.box_text}</span></h4>
-            {/* <div className={stringToCssClassname(props.box_deco_css)}>{props.box_deco}</div> */}
-            {/* <p className="box__content">{props.box_tagline}</p> */}
+    <div className={styles.card}>
+      <div className={styles.cover}>
+        <img className={styles.profile} src='https://i.imgur.com/KykRUCV.jpeg' alt=''/>
+      </div>
+        
+        <h3 className={styles.member_name}>James Carson</h3>
+        <h2 className={styles.por}>President</h2>
+        <div className={styles.socials}>
+          <FontAwesomeIcon className={styles.linkedin} icon={faLinkedin}/>
+          <FontAwesomeIcon className={styles.insta} icon={faInstagram}/>
+          <FontAwesomeIcon className={styles.facebook} icon={faFacebook}/>
+          <FontAwesomeIcon className={styles.twitter} icon={faTwitter}/>
         </div>
-    </a>
+    </div>
   )
 }
 
