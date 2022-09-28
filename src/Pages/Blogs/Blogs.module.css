@@ -1,5 +1,5 @@
 .blogsPage {
-    margin: 20px 0 !important;
+    margin: 20px auto !important;
     max-width: 1400px;
     margin: auto;
 }
@@ -162,5 +162,8 @@
 .blogContent {
     font-size: 22px;
     color: var(--secondary-text-color);
-    white-space: pre-wrap;
+}
+
+.blogPara {
+    margin: 20px 0;
 }
