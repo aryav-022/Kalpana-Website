@@ -5,14 +5,15 @@ import Banner from '../../Components/Banner/Banner'
 
 import Members_Lead from './Members-Lead.json'
 import Members_UAS from './Members_UAS.json'
+import Members_SSC from './Members_SSC.json'
 
 export default function index() {
   return (
     <>
-      <div className={styles.team__heading}><h1 >MEET THE TEAM</h1></div>
-      {/* <Banner
+      {/* <div className={styles.team__heading}><h1 >MEET THE TEAM</h1></div> */}
+      <Banner
         title="OUR TEAM"
-      /> */}
+      />
       <div className={styles.content}>
           <div className={styles.team__head}><h1 >TEAM LEADS</h1></div>
           <div className={styles.grid}>
@@ -23,8 +24,8 @@ export default function index() {
                   key={member.id}
                   href={member.href}
                   img={member.img}
-                  box_title={member.por}
-                  box_text={member.name}
+                  por={member.por}
+                  name={member.name}
                   box_deco={member.box_deco}
                   box_tagline={member.box_tagline}
 
@@ -35,7 +36,7 @@ export default function index() {
       </div>
 
       <div className={styles.content}>
-          <div className={styles.team__head}><h1 >TEAM LEADS</h1></div>
+          <div className={styles.team__head}><h1 >UAS CHAPTER</h1></div>
             <div className={styles.grid}>
             {Members_UAS.map(member => {
               return(
@@ -43,8 +44,28 @@ export default function index() {
                   key={member.id}
                   href={member.href}
                   img={member.img}
-                  box_title={member.por}
-                  box_text={member.name}
+                  por={member.por}
+                  name={member.name}
+                  box_deco={member.box_deco}
+                  box_tagline={member.box_tagline}
+
+                />
+              )
+            })}   
+            </div>
+      </div>
+
+      <div className={styles.content}>
+          <div className={styles.team__head}><h1 >SSC CHAPTER</h1></div>
+            <div className={styles.grid}>
+            {Members_SSC.map(member => {
+              return(
+                <Card
+                  key={member.id}
+                  href={member.href}
+                  img={member.img}
+                  por={member.por}
+                  name={member.name}
                   box_deco={member.box_deco}
                   box_tagline={member.box_tagline}
 
