@@ -13,6 +13,17 @@ body {
 	--color-link: #000;
 	--color-link-hover: #000;
 	--color-info: #000;
+
+	--color-light-primary: #46E0E0;
+	--color-light-secondary: #00979E;
+	--color-dark-primary: #173337;
+	--color-dark-secondary:#080B10;
+
+	--text-color-1:#F2F2F2;
+	--text-color-2:#B3B3B3;
+	--text-color-3:#666666;
+	--text-color-4:#1A1A1A;
+
 	font-family: 'Buenard', serif;
 	min-height: 100vh;
 	color: #57585c;
@@ -67,6 +78,10 @@ a:focus {
 }
 
 .grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
@@ -208,11 +223,14 @@ a:focus {
 
 @media screen and (min-width: 1000px) {
 	.grid {
-		display: grid;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
 		padding: 4rem 3rem 4rem 3rem;
-		grid-row-gap: 2rem;
-		grid-template-columns: repeat(3,calc(100% / 3));
+
+		/* grid-row-gap: 2rem;
+		grid-template-columns: repeat(3,calc(100% / 3)); */
 	}
 	.grid__item {
 		margin: 0;
@@ -302,3 +320,84 @@ a:focus {
 		padding-bottom: 5rem;
 	}
 }
+
+
+/**** Card ****/
+
+.card {
+    padding: 15px;
+    width: 310px;
+    background: #222;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+	border: 3px solid#46E0E0;
+    user-select: none;
+}
+
+.cover {
+	background-size: cover;
+    height: 180px;
+    border-radius: 5px 5px 0 0;
+}
+
+.profile {
+    width: 190px;
+    border-radius: 50%;
+    border: 2px solid #222;
+    background: #222;
+    padding: 5px;
+}
+
+.member_name {
+    font-size: 1.6rem;
+	font-family: 'Lexend Deca', sans-serif;
+    margin: 50px auto 10px;
+    color: var(--text-color-1);
+}
+
+.por {
+	font-size: 1rem;
+	font-family: 'Lexend Deca', sans-serif;
+	color: var(--text-color-2);
+}
+
+.info {
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+.socials {
+	font-size: 2rem;
+    width: 180px;
+    margin: 30px auto 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.linkedin:hover {
+	color: #0077B5;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.insta:hover {
+	color: #BB2668;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.facebook:hover {
+	color: #1773EA;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.twitter:hover {
+	color: #1C96E9;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+/**** Card ****/
