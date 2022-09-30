@@ -179,12 +179,14 @@ html {
 
 .about-description {
     font-size: 3vh;
+    border-radius: 58px;
     margin: 3rem;
     background-color: #1a1a1a;
     padding: 3rem;
 }
 
 .about-description p {
+    color: var(--text-color-2);
     text-align: justify;
 }
 
