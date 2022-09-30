@@ -1,5 +1,6 @@
 import './Banner.css'
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Banner = (props) => {
     const BannerLinks = useRef(null);
@@ -18,7 +19,11 @@ const Banner = (props) => {
 
     return (
         <section id="banner">
-            <div className="bannerContainer">
+            <motion.div 
+            className="bannerContainer"
+            initial={{opacity:0, y:80}}
+            animate={{opacity:1, y:0}}
+            transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.45}}>
                 <div className="years" ref={BannerLinks}>
                     {/*Pass a function "setActiveYear" which takes argument and modifies content based on year.*/}
                     <div className="bannerLink" id="2022" onClick={() => setActiveYear(2022)}>2022</div>
@@ -32,7 +37,7 @@ const Banner = (props) => {
                     {/* Pass the title for the Banner 2 WORDS ONLY RECOMMENDED */}
                     <h2>{props.title}</h2>
                 </div>
-            </div>
+            </motion.div>
             <div ref={BannerEnd}></div>
         </section>
     );

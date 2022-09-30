@@ -3,11 +3,18 @@ import "./Home.css";
 import {FaAngleDoubleDown} from 'react-icons/fa'
 import logo from '../../Assets/Logo/kalpanacaps.png'
 import homeImage from "../../Assets/Images/Home-Image.png"
+import { motion } from 'framer-motion';
+
+
 export default function index() {
   return (
     <div className='home'>
       <div className='hero-container'>
-        <div className='hero'>
+        <motion.div 
+        className='hero'
+        initial={{opacity:0, y:80}}
+        animate={{opacity:1, y:0}}
+        transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.6}}>
           <div className='hero-content'>
             <div className='hero-header'>
               <img src={logo} alt="" />
@@ -24,7 +31,7 @@ export default function index() {
           <div className='hero-image'>
             <img src={homeImage} alt="..." />
           </div>
-        </div>
+        </motion.div>
         <div className='down-move'>
           <a className='down-link' href="#down"><FaAngleDoubleDown className='icon-down'/></a>
         </div>
