@@ -3,7 +3,7 @@ html {
 }
 
 .home{
-    background-color: #000;
+    background-color: var(--secondary-dark-color);
     color: #fff;
 }
 
@@ -18,11 +18,19 @@ html {
     justify-content: space-around;
 }
 
+.hero * {
+    box-sizing: border-box;
+}
+
 .hero-content {
-    display: block; 
     padding: 10vh;
     align-self: center;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 
 .hero-header {
@@ -35,13 +43,14 @@ html {
 }
 
 .hero-header h1 {
-    font-size: 4vh;
+    margin: 0;
+    font-size: 40px;
+    /* font-weight: 200; */
     color: #fff;
 }
 
 .hero-header p {
-    color: var(--text-color-2);
-    font-size: 2vh;
+    font-size: 25px;
     color: rgb(196, 196, 196);
 }
 
@@ -112,27 +121,30 @@ html {
 
 .hero-description p {
     color: var(--text-color-2);
-    font-size: 2vh;
+    font-size: 18px;
     margin: 5vh;
     text-align: justify;
+    max-width: 500px;
     color: rgb(196, 196, 196);
 }
 
 .hero-description a {
     margin: 5vh;
-    background-color: #00979E;
+    background-color: var(--secondary-light-color);
     border: solid #00979E;
-    font-size: 2vh;
+    font-size: 16px;
     text-decoration: none;
     padding: 1vh 2.5vh 1vh 2.5vh;
-    /* padding-left: ; */
     margin-top: 10rem;
     color: rgb(255, 255, 255);
     border-radius: 5px;
+    box-shadow: 0 0 10px -2px var(--primary-light-color);
+    transition: all 100ms;
 }
 
 .hero-description a:hover {
-    background-color: #000;
+    color: var(--primary-light-color);
+    background-color: var(--secondary-dark-color);
     border: solid #00979E;
     border-radius: 5px;
 }
@@ -164,22 +176,37 @@ html {
 .about {
     margin-top: 2rem;
     padding: 3rem;
-    background-color: #000;
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 90vw;
+    background-color: #fff;
+    z-index: 1;
+    margin: auto;
+    clip-path: polygon(25% 44%, 76% 44%, 100% 51%, 70% 62%, 24% 62%, 0 51%);
 }
 
 .about-title {
     color: white;
-    font-size: 6vh;
+    font-size: 36px;
     text-align: center;
+    margin: 0;
 }
 
 .about-title::after {
     content: "";
     display: block; 
     margin: 0 auto; 
-    width: 20%; 
-    padding-top: 10px; 
-    border-bottom: 4px solid #00979E;
+    width: 100px; 
+    padding-top: 10px;
+    border-bottom: 3px solid #00979E;
+    margin-top: -8px;
 }
 
 .about-description {
@@ -198,7 +225,20 @@ html {
 .team {
     margin-top: 2rem;
     padding: 3rem;
-    background-color: #000;
+    position: relative;
+}
+
+.team::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 90vw;
+    background-color: #fff;
+    z-index: 1;
+    margin: auto;
+    clip-path: polygon(25% 44%, 76% 44%, 100% 51%, 70% 62%, 24% 62%, 0 51%);
 }
 
 .team-title {
@@ -207,19 +247,61 @@ html {
     text-align: center;
 }
 
+
 .team-title::after {
     content: "";
     display: block; 
     margin: 0 auto; 
-    width: 20vw; 
-    padding-top: 10px; 
-    border-bottom: 4px solid #00979E;
+    width: 100px; 
+    padding-top: 10px;
+    border-bottom: 3px solid #00979E;
+    margin-top: -8px;
 }
 
 .events {
     margin-top: 2rem;
-    padding: 3rem;
-    background-color: #000;
+}
+
+.events-backgorund {
+    position: absolute;
+    background-color: #121212;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    height: 400px;
+    width: 100vw;
+    z-index: 0;
+}
+
+.events-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.events-left-container {
+    position: relative;
+    z-index: 1;
+    height: 250px;
+    margin-left: 50px;
+}
+
+.event-title {
+    position: relative;
+    font-size: 36px;
+}
+
+.event-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    bottom: -8px;
+    left: 0;
+    background-color: var(--primary-light-color);
+}
+
+.events-description {
+    font-size: 20px;
+    margin-top: 100px;
 }
 
 .events-title {
@@ -232,7 +314,23 @@ html {
     content: "";
     display: block; 
     margin: 0 auto; 
-    width: 15vw; 
-    padding-top: 10px; 
-    border-bottom: 4px solid #00979E;
+    width: 100px; 
+    padding-top: 10px;
+    border-bottom: 3px solid #00979E;
+    margin-top: -8px;
+}
+
+.events-image {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+}
+
+.right-container {
+    margin-left: auto;
+    margin-right: 50px;
+    width: 40%;
+    translate: 0 23px;
 }

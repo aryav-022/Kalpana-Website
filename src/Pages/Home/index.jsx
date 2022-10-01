@@ -4,6 +4,7 @@ import {FaAngleDoubleDown} from 'react-icons/fa'
 import logo from '../../Assets/Logo/kalpanacaps.png'
 import homeImage from "../../Assets/Images/Home-Image.png"
 import { motion } from 'framer-motion';
+import eventsImage from "../../Assets/Images/events.svg";
 
 
 export default function index() {
@@ -18,7 +19,7 @@ export default function index() {
           <div className='hero-content'>
             <div className='hero-header'>
               <img src={logo} alt="" />
-              <div>
+              <div className='container'>
                 <h1>Team Kalpana</h1>
                 <p>Aeronautical Society of NSUT</p>
               </div>
@@ -38,10 +39,7 @@ export default function index() {
       </div>
 
       <div id='about' className='about'>
-        <div className='about-title'>
-        <h1>Who are we</h1>
-        <div className='bottom-border'></div>
-        </div>
+        <h1 className='about-title'>Who are we</h1>
         <div className='about-description'>
           <p>Team Kalpana is a group of hard working, like-mided people who are enthusiastic about space exploration. We participate in various reputated competions like CANSAT and UAS and represented NSUT. I am getting out of words so will fill this thing with random sentences from now on. Afterall my job is to make the design and code it. I am no content writter. I have been a part of Team Kalpana from 7 months now but still i do not have much things to write about. I have some idea about this society and can write a thing or two, but times up.</p>
         </div>
@@ -54,8 +52,17 @@ export default function index() {
 
       <div className='events'>
         <h1 className='events-title'>Events</h1>
-        <div className='events-description'></div>
-      </div>
+        <div className="events-container">
+          <div className="events-backgorund"></div>
+          <div className="events-left-container">
+            <div className="event-title">No Current Event</div>
+            <div className='events-description'>Keep visiting to stay updated!</div>
+          </div>
+          <div className="right-container">
+            <img src={eventsImage} alt="" className='events-image'/>
+          </div>
+        </div>
+        </div>
       <div id="down"></div>
     </div>
   )
