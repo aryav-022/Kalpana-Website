@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Home.css";
 import {FaAngleDoubleDown} from 'react-icons/fa'
 import logo from '../../Assets/Logo/kalpanacaps.png'
 import homeImage from "../../Assets/Images/Home-Image.png"
 import { motion } from 'framer-motion';
+import Card from '../Team/Card';
 
 
 export default function index() {
@@ -49,7 +51,24 @@ export default function index() {
 
       <div className='team'>
         <h1 className='team-title'>The Team</h1>
-        <div className='team-description'></div>
+        <div className='team_grid'>
+          <Card
+            img='1.jpg'
+            por='Vice President'
+            name='Vandit'
+          />
+          <Card
+            img='2.jpg'
+            por='President'
+            name='Alankriti'
+          />
+          <Card
+            img='3.jpg'
+            por='Vice President'
+            name='Tushar'
+          />
+        </div>
+        <Link id='team_link' to="/team"><button className='team_button'>Know More</button></Link>
       </div>
 
       <div className='events'>

@@ -87,7 +87,7 @@ a:focus {
 	padding-bottom: 10rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1150px) {
 	.grid {
 		display: flex;
 		flex-direction: row;
@@ -100,7 +100,7 @@ a:focus {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
 	.content {
 		flex-direction: column;
 		height: auto;
@@ -208,6 +208,12 @@ a:focus {
 	color: #1C96E9;
 	cursor: pointer;
 	transition: 0.28s ease-in-out;
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+		width: 295px;
+	}
 }
 
 /**** Card ****/

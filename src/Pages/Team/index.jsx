@@ -22,13 +22,9 @@ export default function index() {
                 
                 <Card
                   key={member.id}
-                  href={member.href}
                   img={member.img}
                   por={member.por}
                   name={member.name}
-                  box_deco={member.box_deco}
-                  box_tagline={member.box_tagline}
-
                 />
               )
             })}
@@ -42,13 +38,9 @@ export default function index() {
               return(
                 <Card
                   key={member.id}
-                  href={member.href}
                   img={member.img}
                   por={member.por}
                   name={member.name}
-                  box_deco={member.box_deco}
-                  box_tagline={member.box_tagline}
-
                 />
               )
             })}   
@@ -62,13 +54,9 @@ export default function index() {
               return(
                 <Card
                   key={member.id}
-                  href={member.href}
                   img={member.img}
                   por={member.por}
                   name={member.name}
-                  box_deco={member.box_deco}
-                  box_tagline={member.box_tagline}
-
                 />
               )
             })}   
