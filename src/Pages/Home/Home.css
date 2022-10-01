@@ -4,6 +4,7 @@ html {
 
 .home{
     background-color: #000;
+    color: #fff;
 }
 
 .hero-container {
@@ -41,6 +42,7 @@ html {
 .hero-header p {
     color: var(--text-color-2);
     font-size: 2vh;
+    color: rgb(196, 196, 196);
 }
 
 .hero-image {
@@ -113,6 +115,7 @@ html {
     font-size: 2vh;
     margin: 5vh;
     text-align: justify;
+    color: rgb(196, 196, 196);
 }
 
 .hero-description a {
@@ -124,7 +127,7 @@ html {
     padding: 1vh 2.5vh 1vh 2.5vh;
     /* padding-left: ; */
     margin-top: 10rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
     border-radius: 5px;
 }
 
