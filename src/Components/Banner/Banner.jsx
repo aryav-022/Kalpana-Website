@@ -23,7 +23,8 @@ const Banner = (props) => {
             className="bannerContainer"
             initial={{opacity:0, y:80}}
             animate={{opacity:1, y:0}}
-            transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.45}}>
+            transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.45}}
+            >
                 <div className="years" ref={BannerLinks}>
                     {/*Pass a function "setActiveYear" which takes argument and modifies content based on year.*/}
                     <div className="bannerLink" id="2022" onClick={() => setActiveYear(2022)}>2022</div>
