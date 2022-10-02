@@ -6,13 +6,6 @@ import { faFacebook, faInstagram, faLinkedin, faTwitter} from '@fortawesome/free
 const card = (props) => {
   const img = require(`../../Assets/Images/img/${props.img}`);
 
-  function stringToCssClassname(s)
-  {
-    var css = "";
-    s.split(" ").forEach(element => { css += " "+styles[element] });
-    return css;
-  }
-
   return (
     <div className={styles.card}>
       <div className={styles.cover}>

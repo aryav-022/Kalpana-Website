@@ -5,6 +5,7 @@ html {
 .home{
     background-color: var(--secondary-dark-color);
     color: #fff;
+    overflow-x: hidden;
 }
 
 .hero-container {
@@ -13,7 +14,7 @@ html {
 
 .hero {
     display: flex;
-    width: 99vw;
+    width: 100vw;
     justify-self: space-between;
     justify-content: space-around;
 }
@@ -130,23 +131,24 @@ html {
 
 .hero-description a {
     margin: 5vh;
-    background-color: var(--secondary-light-color);
-    border: solid #00979E;
     font-size: 16px;
     text-decoration: none;
     padding: 1vh 2.5vh 1vh 2.5vh;
-    margin-top: 10rem;
-    color: rgb(255, 255, 255);
     border-radius: 5px;
-    box-shadow: 0 0 10px -2px var(--primary-light-color);
     transition: all 100ms;
-}
-
-.hero-description a:hover {
-    color: var(--primary-light-color);
-    background-color: var(--secondary-dark-color);
+    width: min(95vw, 400px);
     border: solid #00979E;
     border-radius: 5px;
+    color: white;
+    background-color: var(--secondary-light-color);
+    box-shadow: 0 0 10px -10px var(--primary-light-color);
+}
+
+.hero-description a:hover,
+.hero-description a:focus {
+    box-shadow: 0 0 10px -2px var(--primary-light-color);
+    color: var(--primary-light-color);
+    background-color: var(--secondary-dark-color);
 }
 
 .down-move {
@@ -212,8 +214,8 @@ html {
 }
 
 .about-description {
-    font-size: 2rem;
-    border-radius: 58px;
+    font-size: 22px;
+    border-radius: 30px;
     margin: 3rem;
     background-color: #1a1a1a;
     padding: 3rem;
@@ -337,29 +339,30 @@ html {
 }
 
 .team_button {
-    background-color: var(--secondary-light-color);
-    border: solid #00979E;
     font-size: 16px;
     text-decoration: none;
     padding: 1vh 2.5vh 1vh 2.5vh;
-    color: rgb(255, 255, 255);
     border-radius: 5px;
-    box-shadow: 0 0 10px -2px var(--primary-light-color);
     transition: all 100ms;
-}
-
-.team_button:hover,
-.team_button:focus {
+    width: min(95vw, 400px);
     color: var(--primary-light-color);
     background-color: var(--secondary-dark-color);
     border: solid #00979E;
     border-radius: 5px;
+    box-shadow: 0 0 10px -2px var(--primary-light-color);
+}
+
+.team_button:hover,
+.team_button:focus {
+    box-shadow: 0 0 10px -10px var(--primary-light-color);
+    color: white;
+    background-color: var(--secondary-light-color);
 }
 
 /****** Team Section ******/
 
 .events {
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 .events-backgorund {
@@ -367,7 +370,7 @@ html {
     background-color: #121212;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
     height: 400px;
-    width: 99vw;
+    width: min(1400px, 90vw);
     z-index: 0;
 }
 

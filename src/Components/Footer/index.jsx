@@ -7,8 +7,6 @@ import logo from "../../Assets/Logo/kalpanacaps.png";
 export default function Footer() {
   return (
     <div className="body">
-      <hr className="divider" />
-      <hr className="divider" />
       <footer className="flex-rw">
           
           <ul className="footer-list-top">
@@ -45,7 +43,7 @@ export default function Footer() {
           </section>
           <section className="footer-bottom-section flex-rw">
         <div className="footer-bottom-wrapper">   
-        <i className="fa fa-copyright" role="copyright">
+        <i className="fa fa-copyright">
         
         </i> <span>ⓒ 2022 Copyright: Team Kalpana - All Rights Reserved - </span>
             </div>
