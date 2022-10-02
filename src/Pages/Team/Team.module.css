@@ -176,7 +176,7 @@ a:focus {
 .socials {
 	font-size: 2rem;
     width: 180px;
-    margin: 30px auto 10px;
+    margin: 2rem auto 10px;
     display: flex;
     justify-content: space-between;
     gap: 5px;
@@ -212,7 +212,16 @@ a:focus {
 
 @media screen and (max-width: 550px) {
     .card {
-		width: 295px;
+		width: 270px;
+	}
+
+	.profile {
+		height: 150px;
+		width: 150px;
+	}
+
+	.member_name {
+		margin: 1rem auto 10px;
 	}
 }
 

@@ -254,7 +254,7 @@ html {
     }
 
     .about-description {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin: 1rem 0.5rem;
     }
 }
@@ -262,14 +262,6 @@ html {
 @media screen and (max-width: 500px) {
     .about {
         padding: 1.5rem;
-    }
-
-    .about-title {
-        font-size: 1.5rem;
-    }
-
-    .about-description {
-        font-size: 0.8rem;
     }
 }
 
@@ -307,7 +299,7 @@ html {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding-bottom: 10rem;
+	padding-bottom: 5rem;
 }
 
 @media screen and (min-width: 1150px) {
@@ -340,16 +332,11 @@ html {
     margin-top: -8px;
 }
 
-.team.team_button a {
-    margin: 1rem auto;
-}
-
 #team_link {
     margin: 1.5rem auto;
 }
 
 .team_button {
-    margin: 5vh;
     background-color: var(--secondary-light-color);
     border: solid #00979E;
     font-size: 16px;
@@ -380,7 +367,7 @@ html {
     background-color: #121212;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
     height: 400px;
-    width: 100vw;
+    width: 99vw;
     z-index: 0;
 }
 
