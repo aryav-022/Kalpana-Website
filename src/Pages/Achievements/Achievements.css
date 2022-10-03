@@ -161,6 +161,10 @@
         width: 90%;
     }
 
+    .achCardContent > h2 {
+        font-size: 2em;
+    }
+
     .achCardContent>p {
         padding-top: 2em;
     }
