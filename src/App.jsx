@@ -20,8 +20,8 @@ export default function App() {
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="*" element={<Navigate to="/" replace={true} />} />
                 </Routes>
-            </BrowserRouter>
                 <NewFooter />
+            </BrowserRouter>
         </div>
     );
 }
