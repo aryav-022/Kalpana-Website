@@ -71,13 +71,13 @@ section {
 }
 
 .bannerContent h3 {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     font-family: lexend deca;
     font-weight: 400;
 }
 
 .bannerContent h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: poppins;
     font-weight: 600;
     line-height: 1.2em;
@@ -115,7 +115,11 @@ section {
     .bannerContent h2 {
 
         padding-top: 1.4em;
-        font-size: 4.3rem;
+        font-size: 4.8rem;
+    }
+
+    .bannerContent h3 {
+        font-size: 3.5em;
     }
 }
 
@@ -126,6 +130,12 @@ section {
         justify-content: space-around;
         width: 95%;
     }
+    .bannerContent h3 {
+        font-size: 2.5em;
+    }.bannerContent h2 {
+        font-size: 4.2em;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -138,7 +148,7 @@ section {
     .years {
         font-size: 2.8em;
         width: 20%;
-        height: 16rem;
+        height: 18rem;
         justify-content: space-between;
     }
 
@@ -152,11 +162,11 @@ section {
     
     .bannerContent>h2 {
         padding-top: 1.5em;
-        font-size: 5em;
+        font-size: 4em;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     
     #banner{
         text-align: center;
@@ -171,7 +181,7 @@ section {
 
     .years {
         padding-top: .5em;
-        font-size: 3em;
+        font-size: 2.2em;
         width: 40%;
         height: 18rem;
         justify-content: space-evenly;
@@ -180,18 +190,19 @@ section {
     }
 
     .bannerContent>h3{
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .bannerContent>h2{
         padding-top: 1em;
-        font-size: 4em;
+        font-size: 3em;
+        padding-bottom: 1em;
     }
 }
 
 @media only screen and (max-width: 450px)
 {
     .bannerContent>h2{
-        font-size: 3.5em;
+        font-size: 2.2em;
     }
 }

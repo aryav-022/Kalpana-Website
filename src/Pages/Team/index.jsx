@@ -12,7 +12,7 @@ export default function index() {
     <>
       {/* <div className={styles.team__heading}><h1 >MEET THE TEAM</h1></div> */}
       <Banner
-        title="OUR TEAM"
+        title="Our Team"
       />
       <div className={styles.content}>
           <div className={styles.team__head}><h1 >TEAM LEADS</h1></div>
