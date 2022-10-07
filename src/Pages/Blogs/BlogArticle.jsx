@@ -1,13 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useBlogs } from '../../contexts/BlogsProvider';
 import styles from "./Blogs.module.css";
-import blogs from "./Blogs.json";
-import Markdown from './Markdown';
+import Markdown from './Markdown'
 
 
 export default function BlogArticle() {
+  const Blogs = useBlogs();
+
   const { id } = useParams();
-  const blog = blogs.filter(blog => {return blog.id.toString() === id})[0];
+  const blog = Blogs.filter(blog => {return blog.id.toString() === id})[0];
   
   window.scrollTo(0,0);
 
