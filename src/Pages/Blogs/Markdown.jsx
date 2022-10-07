@@ -13,15 +13,16 @@ export default function Markdown(props) {
         New Line - \n
     */
 
+    const headings = [styles.h1, styles.h2, styles.h3, styles.h4, styles.h5, styles.h6];
+
     const { content } = props;
 
     function markdownCompiler(line) {
         if (line[0] === '#') {
             const words = line.split(" ");
             const word = words[0];
-            const size = 64 - 7 * (word.length - 1);
             return (
-                <div style={{fontSize: `${size}px`}}>
+                <div className={headings[word.length - 1]}>
                     {line.substring(word.length)}
                 </div>
             )
@@ -51,7 +52,7 @@ export default function Markdown(props) {
                                                     const par = word.split(",")
                                                     const path = par[0].trim();
                                                     return (
-                                                        <img src={ require(`../../Assets/${path}`) } alt="" style={{ display: "block", height: "500px", width: "500px", margin: "auto" }} />
+                                                        <img src={ require(`../../Assets/${path}`) } alt="" className={styles.articleImage} />
                                                     )
                                                 }
                                             })
