@@ -190,37 +190,43 @@
 .h1 {
     font-size: 56px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .h2 {
     font-size: 48px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .h3 {
     font-size: 40px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .h4 {
     font-size: 32px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .h5 {
     font-size: 22px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .h6 {
     font-size: 16px;
     border-bottom: 1px solid var(--tertiary-text-color);
-    padding-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .articleImage {
@@ -297,9 +303,9 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .blogContainer {
-        padding: 20px;
+        padding: 20px 10px;
     }
     .blogHeading {
         text-align: center;

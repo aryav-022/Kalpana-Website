@@ -39,7 +39,7 @@ body {
   background-color: var(--primary-light-color);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .bottomRule {
     margin: auto;
   }
