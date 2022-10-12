@@ -10,7 +10,8 @@ app.use(cors({
     method: ['GET', 'POST']
 }))
 
-app.use('/static', express.static('public'))
+app.use(express.static('public'));
+app.use("/images", express.static('assets/images'));
 
 // import mongoose from 'mongoose';
 // mongoose.connect('mongodb://localhost:27017/team-kalpana', () => console.log("connected to mongodb"));
