@@ -44,7 +44,7 @@ export default function Markdown(props) {
                                             return pathWords.map(word => {
                                                 if (pathWords.indexOf(word) % 2 === 0) {
                                                     return (
-                                                        <span>{word}</span>
+                                                        <span key={word + pathWords.indexOf(word)}>{word}</span>
                                                     )
                                                 }
                                                 else {
@@ -52,35 +52,35 @@ export default function Markdown(props) {
                                                     const par = word.split(",")
                                                     const path = par[0].trim();
                                                     return (
-                                                        <img src={ require(`../../Assets/${path}`) } alt="" className={styles.articleImage} />
+                                                        <img src={ require(`../../Assets/${path}`) } alt="" className={styles.articleImage} key={word + pathWords.indexOf(word)} />
                                                     )
                                                 }
                                             })
                                         }
                                         else {
                                             return (
-                                                <><s>{word.trim()}</s><span> </span></>
+                                                <><s key={word + crossedWords.indexOf(word)}>{word.trim()}</s><span> </span></>
                                             )
                                         }
                                     })
                                 }
                                 else {
                                     return (
-                                        <><u>{word.trim()}</u><span> </span></>
+                                        <><u key={word + underlineWords.indexOf(word)}>{word.trim()}</u><span> </span></>
                                     )
                                 }
                             })
                         }
                         else {
                             return (
-                                <i>{word}</i>
+                                <i key={word + italicsWords.indexOf(word)}>{word}</i>
                             )
                         }
                     })
                 }
                 else {
                     return (
-                        <strong>{word}</strong>
+                        <strong key={word + words.indexOf(word)}>{word}</strong>
                     )
                 }
             })
