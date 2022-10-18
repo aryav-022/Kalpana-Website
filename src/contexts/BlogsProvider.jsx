@@ -16,7 +16,7 @@ export default function BlogsProvider({ children }) {
         "date": "2022-05-15",
         "description": "Hello This is description. Lazy peopled dont write or typed and this random is rndom"
     }]
-    const Blogs = useFetch('http://localhost:8000/blogs.json', init);
+    const Blogs = useFetch('https://jsonkeeper.com/b/RA5Y', init);
 
     return (
         <BlogsContext.Provider value={Blogs}>
