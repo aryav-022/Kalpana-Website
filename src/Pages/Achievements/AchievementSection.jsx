@@ -1,5 +1,6 @@
 import Banner from "../../Components/Banner/Banner";
 import { useEffect, useState } from "react";
+import styles from './Achievements.module.css';
 import achievements from './Achievements.json'
 import AchievementCard from "./AchievementCard";
 
@@ -16,8 +17,8 @@ const AchievementSection = () => {
     return (
         <div>
            <Banner title="Our Achievements" setYear={setYear} />
-           <div id="achSectionContainer">
-            <section id="achSection">
+           <div id={styles.achSectionContainer}>
+            <section id={styles.achSection}>
                 {Achievements.map(Achievement => <AchievementCard Achievement = {Achievement} key = {Achievement.id} img = {Achievement.coverphoto}/>)}
            </section>
            </div>
