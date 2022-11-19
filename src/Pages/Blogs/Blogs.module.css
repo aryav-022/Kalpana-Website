@@ -18,10 +18,6 @@
     margin: 50px auto;
 }
 
-.blogArticleSection{
-    margin: 0 auto;
-    width: min(95%, 85rem);
-}
 
 .blogsContainer {
     display: grid;
