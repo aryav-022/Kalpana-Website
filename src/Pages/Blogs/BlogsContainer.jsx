@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./Blogs.module.css";
-import Blogs from "./Blogs.json";
+// import Blogs from "./Blogs.json";
+import { useBlogs } from "../../contexts/BlogsProvider";
 import BlogCard from './BlogCard';
 import { useRef, useEffect } from "react";
 
@@ -9,6 +10,8 @@ export default function BlogsContainer() {
   const dateInput = useRef(null);
   const blogsContainer = useRef(null);
 
+  const Blogs = useBlogs();
+  
   useEffect(() => {
     const searchInp = searchInput;
     const dateInp = dateInput;

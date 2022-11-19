@@ -38,3 +38,9 @@ body {
   height: 3px;
   background-color: var(--primary-light-color);
 }
+
+@media screen and (max-width: 500px) {
+  .bottomRule {
+    margin: auto;
+  }
+}

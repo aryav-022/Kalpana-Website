@@ -13,15 +13,16 @@ export default function Markdown(props) {
         New Line - \n
     */
 
+    const headings = [styles.h1, styles.h2, styles.h3, styles.h4, styles.h5, styles.h6];
+
     const { content } = props;
 
     function markdownCompiler(line) {
         if (line[0] === '#') {
             const words = line.split(" ");
             const word = words[0];
-            const size = 64 - 7 * (word.length - 1);
             return (
-                <div style={{fontSize: `${size}px`}}>
+                <div className={headings[word.length - 1]}>
                     {line.substring(word.length)}
                 </div>
             )
@@ -43,7 +44,7 @@ export default function Markdown(props) {
                                             return pathWords.map(word => {
                                                 if (pathWords.indexOf(word) % 2 === 0) {
                                                     return (
-                                                        <span>{word}</span>
+                                                        <span key={word + pathWords.indexOf(word)}>{word}</span>
                                                     )
                                                 }
                                                 else {
@@ -51,35 +52,35 @@ export default function Markdown(props) {
                                                     const par = word.split(",")
                                                     const path = par[0].trim();
                                                     return (
-                                                        <img src={ require(`../../Assets/${path}`) } alt="" style={{ display: "block", height: "500px", width: "500px", margin: "auto" }} />
+                                                        <img src={ require(`../../Assets/${path}`) } alt="" className={styles.articleImage} key={word + pathWords.indexOf(word)} />
                                                     )
                                                 }
                                             })
                                         }
                                         else {
                                             return (
-                                                <><s>{word.trim()}</s><span> </span></>
+                                                <><s key={word + crossedWords.indexOf(word)}>{word.trim()}</s><span> </span></>
                                             )
                                         }
                                     })
                                 }
                                 else {
                                     return (
-                                        <><u>{word.trim()}</u><span> </span></>
+                                        <><u key={word + underlineWords.indexOf(word)}>{word.trim()}</u><span> </span></>
                                     )
                                 }
                             })
                         }
                         else {
                             return (
-                                <i>{word}</i>
+                                <i key={word + italicsWords.indexOf(word)}>{word}</i>
                             )
                         }
                     })
                 }
                 else {
                     return (
-                        <strong>{word}</strong>
+                        <strong key={word + words.indexOf(word)}>{word}</strong>
                     )
                 }
             })
