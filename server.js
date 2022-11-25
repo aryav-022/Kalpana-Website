@@ -5,14 +5,17 @@ dotenv.config()
 
 const PORT = 8000;
 
+const allowedOrigin = process.env.CLIENT_PATH || 'http://localhost:3000';
+const serverPath = process.env.SERVER_PATH || 'http://localhost:8000';
+
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://teamkalpana.onrender.com', process.env.CLIENT_PATH],
+    origin: allowedOrigin,
     method: ['GET', 'POST']
 }))
 
 app.use(express.static('public'));
 app.use("/images", express.static('assets/images'));
 
-app.listen(PORT, () => console.log("\x1b[33m%s\x1b[0m", `Application Started on ${process.env.SERVER_PATH}`));
+app.listen(PORT, () => console.log("\x1b[33m%s\x1b[0m", `Application Started on ${serverPath}`));
