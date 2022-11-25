@@ -1,7 +1,11 @@
 import mongoose from 'mongoose';
-import slugify from "slugify";
 
 const blogSchema = new mongoose.Schema({
+    id: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     heading: {
         type: String,
         required: true
@@ -16,20 +20,9 @@ const blogSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    slug: {
-        type: String,
-        required: true,
-        unique: true
-    },
     image: {
         type: String,
     }
 });
-
-blogSchema.pre('validate', function() {
-    if (this.title) {
-        this.slug = slugify(this.title, { lower: true, strict: true });
-    }
-})
 
 export default mongoose.model('blog', blogSchema);
