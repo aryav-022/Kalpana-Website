@@ -6,6 +6,11 @@ const Banner = (props) => {
     const BannerLinks = useRef(null);
     const BannerEnd = useRef(null);
 
+    const variants = {
+        initial  : {opacity:0, y:50},
+        animate : {opacity:1, y:0, transition:{ease: [0.6, 0.01, -0.05, 0.95], duration:0.45, delay:0.1}}
+      }
+
     function setActiveYear(year) {
         props.setYear(year);
         const bannerLinks = [...BannerLinks.current.children];
@@ -20,10 +25,10 @@ const Banner = (props) => {
     return (
         <section id="banner">
             <motion.div 
-            className="bannerContainer"
-            initial={{opacity:0, y:80}}
-            animate={{opacity:1, y:0}}
-            transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.45}}
+            className='bannerContainer'
+            variants={variants}
+            initial='initial'
+            animate='animate'
             >
                 <div className="years" ref={BannerLinks}>
                     {/*Pass a function "setActiveYear" which takes argument and modifies content based on year.*/}

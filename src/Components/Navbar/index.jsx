@@ -29,7 +29,7 @@ export default function Navbar() {
     <div className={styles.navb}>
       <nav className={styles.navbar}>
          <div className={styles.logo} style={{display: 'flex', alignItems: 'center'}}>
-          <img src={logo} alt="logo" style={{width:'100px'}} />
+          <img src={logo} alt="logo"/>
             <p className={styles.nav_title}>Team Kalpana</p>
          </div>
          <input ref={CheckBox} type="checkbox" id="click" className={styles.click} />

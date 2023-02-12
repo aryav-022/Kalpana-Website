@@ -3,21 +3,28 @@ import { Link } from 'react-router-dom';
 import "./Home.css";
 import {FaAngleDoubleDown} from 'react-icons/fa'
 import logo from '../../Assets/Logo/kalpanacaps.png'
-import homeImage from "../../Assets/Images/Home-Image.png"
+import heroImage from "../../Assets/Images/hero_image.png"
 import { motion } from 'framer-motion';
 import Card from '../Team/Card';
 import eventsImage from "../../Assets/Images/events.svg";
 
 
-export default function index() {
+export default function index({memberData}) {
+  // window.onbeforeunload = function () {
+  //   window.scrollTo(0, 0);
+  // }
+
+  // const variants = {
+  //   initial  : {opacity:0},
+  //   animate : {opacity:1, transition:{duration:2.5}}
+  // }
+  const leadArr = [18,20,13]
   return (
     <div className='home'>
       <div className='hero-container'>
         <motion.div 
         className='hero'
-        initial={{opacity:0, y:80}}
-        animate={{opacity:1, y:0}}
-        transition={{ease: [0.6, 0.01, -0.05, 0.95], duration:0.6}}>
+        >
           <div className='hero-content'>
             <div className='hero-header'>
               <img src={logo} alt="" />
@@ -27,12 +34,12 @@ export default function index() {
               </div>
             </div>
             <div className='hero-description'>
-              <p>We at team kalpana are very laxy people always avoiding work. Content Team please fill these.</p>
+              <p>A society for passionate ,hard-working and like-minded individuals who are enthusiastic about space-related stuff.</p>
               <a href='#about'>Know More</a>
             </div>
           </div>
           <div className='hero-image'>
-            <img src={homeImage} alt="..." />
+            <img src={heroImage} alt="..." />
           </div>
         </motion.div>
         <div className='down-move'>
@@ -43,28 +50,28 @@ export default function index() {
       <div id='about' className='about'>
         <h1 className='about-title'>Who are we</h1>
         <div className='about-description'>
-          <p>Team Kalpana is a group of hard working, like-mided people who are enthusiastic about space exploration. We participate in various reputated competions like CANSAT and UAS and represented NSUT. I am getting out of words so will fill this thing with random sentences from now on. Afterall my job is to make the design and code it. I am no content writter. I have been a part of Team Kalpana from 7 months now but still i do not have much things to write about. I have some idea about this society and can write a thing or two, but times up.</p>
+          <p>Team Kalpana is a group of passionate, hard-working individuals who once put their mind to something rest only after achieving it. Our main Goal is to represent our nation and College at various International and national events like UAS, Cansat and SSC. This society is mainly focused on building drones for competing in the above mentioned competitions.</p>
         </div>
       </div>
 
       <div className='team'>
         <h1 className='team-title'>The Team</h1>
         <div className='team_grid'>
-          <Card
-            img='1.jpg'
-            por='Vice President'
-            name='Vandit'
-          />
-          <Card
-            img='2.jpg'
-            por='President'
-            name='Alankriti'
-          />
-          <Card
-            img='3.jpg'
-            por='Vice President'
-            name='Tushar'
-          />
+          {memberData.data ?
+            leadArr.map((i) => {
+            const temp=memberData.data[i]
+            return(
+              <Card
+                    key={i}
+                    img={temp.photo}
+                    por={temp.por}
+                    name={temp.name}
+                    linkedin={temp.linkedin}
+                    insta={temp.insta}
+                    git={temp.github}
+                  />
+            )
+          }):null}
         </div>
         <Link id='team_link' to="/team"><button className='team_button'>Know More</button></Link>
       </div>

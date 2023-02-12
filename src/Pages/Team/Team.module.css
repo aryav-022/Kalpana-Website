@@ -91,7 +91,7 @@ a:focus {
 	.grid {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		padding: 4rem 3rem 4rem 3rem;
 
@@ -126,14 +126,17 @@ a:focus {
 .card {
     padding: 15px;
     width: 310px;
+	height: 470px;
+	margin: 0 2rem 0 2rem;
     background: #191a1c;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
 	border: 3px solid#46E0E0;
     user-select: none;
-	scale: 1;
-	transition: all 200ms;
+
+	/* scale: 1;
+	transition: all 200ms; */
 }
 
 .card:hover {
@@ -201,7 +204,7 @@ a:focus {
 }
 
 .facebook:hover {
-	color: #1773EA;
+	color: #f7f7f7;
 	cursor: pointer;
 	transition: 0.28s ease-in-out;
 }
