@@ -11,7 +11,8 @@ import BlogsProvider from "./contexts/BlogsProvider";
 
 export default function App() {
     const [memberData,setMemberData] = useState([]);
-    const url = "https://script.google.com/macros/s/AKfycbwq8MvWGenqPfRH9lDVHSuS4J0jxulkN6-es8uWU_JlZLmBbIPYRfl4cRSD_MqQKpw6ng/exec";
+    const url = process.env.REACT_APP_API_URL
+    console.log(url)
     useEffect(() => {
     axios.get(url).then((response) =>{
       setMemberData(response.data)
