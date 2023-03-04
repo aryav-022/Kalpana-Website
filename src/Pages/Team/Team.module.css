@@ -151,6 +151,8 @@ a:focus {
 }
 
 .profile {
+	object-fit: cover;
+	object-position: center;
 	height: 190px;
     width: 190px;
     border-radius: 50%;
