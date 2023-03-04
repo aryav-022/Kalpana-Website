@@ -18,7 +18,7 @@ const Banner = (props) => {
     }
 
     return (
-        <section classNam={styles.banner}>
+        <section className={styles.banner}>
             <motion.div 
             className={styles.bannerContainer}
             initial={{opacity:0, y:80}}
