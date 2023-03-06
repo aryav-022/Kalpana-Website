@@ -1,27 +1,32 @@
 import Banner from "../../Components/Banner/Banner";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from './Achievements.module.css';
-import achievements from './Achievements.json'
 import AchievementCard from "./AchievementCard";
+import {AchievementsContext} from "../../contexts/achievementsContext";
 
 const AchievementSection = () => {
-    const [Achievements, setAchievements] = useState(achievements.filter(achievement => achievement.year === 2022));
+    
+    const {achievements} = useContext(AchievementsContext);
+
+    const [Achievements, setAchievements] = useState(null);
     const [year, setYear] = useState(2022);
 
+
     useEffect(() => {
+        if (!achievements || !Array.isArray(achievements)) return;
         const newAchievements = achievements.filter(Achievement => Achievement.year === year);
         setAchievements(newAchievements);
-    }, [year])
+    }, [year, achievements])
 
-
+    
     return (
         <div>
            <Banner title="Our Achievements" setYear={setYear} />
-           <div id={styles.achSectionContainer}>
+           {Achievements && <div id={styles.achSectionContainer}>
             <section id={styles.achSection}>
                 {Achievements.map(Achievement => <AchievementCard Achievement = {Achievement} key = {Achievement.id} img = {Achievement.coverphoto}/>)}
            </section>
-           </div>
+           </div>}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import styles from './Achievements.module.css';
 
 const AchievementCard = (props) => {
-    const img = require(`../../Assets/Images/img/${props.img}`);
+    const img = require(`../../Assets/Images/img/image.png`);
     return ( 
         <div className={styles.achCardBox}>
             <div className={styles.achCardContent}>

@@ -5,11 +5,13 @@ import Footer from "./Components/Footer-new";
 import { Home, Team, Achievements, Blogs, Sponsors } from "./Pages";
 import BlogArticle from "./Pages/Blogs/BlogArticle";
 import BlogsProvider from "./contexts/BlogsProvider";
+import AchievementsContextProvider from "./contexts/achievementsContext";
 
 
 export default function App() {
     return (
         <BlogsProvider>
+            <AchievementsContextProvider>
             <div className="App">
                 <BrowserRouter>
                     <Navbar />
@@ -24,7 +26,8 @@ export default function App() {
                     </Routes>
                     <Footer />
                 </BrowserRouter>
-            </div>
+                </div>
+                </AchievementsContextProvider>
         </BlogsProvider>
     );
 }
