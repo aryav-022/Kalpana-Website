@@ -24,7 +24,20 @@ a {
     height: 50rem;
 } */
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .bannerContainer {
+    /* animation: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 slideUp; */
     /* height: 100%; */
     margin: 0 auto;
     padding: 6.5rem 0;
