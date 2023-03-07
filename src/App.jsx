@@ -1,5 +1,4 @@
 import {React, useState,useEffect} from 'react';
-import axios from 'axios';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 // import Footer from "./Components/Footer";
@@ -13,14 +12,17 @@ import AchievementsContextProvider from "./contexts/achievementsContext";
 export default function App() {
     const [memberData,setMemberData] = useState([]);
     const url = process.env.REACT_APP_API_URL
-    console.log(url)
 
     useEffect(() => {
-    axios.get(url).then((response) =>{
-      setMemberData(response.data)
-    }).catch((error) => {
-      console.log(error)
-    })
+        (async () => {
+            try {
+                const res = await fetch(process.env.REACT_APP_API_URL);
+                const data = await res.json();
+                setMemberData(data);
+            } catch (error) {
+                console.log("Error Fetching Member Data: ", error);
+            }
+        })();
     }, [url])
 
     return (
