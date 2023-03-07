@@ -22,7 +22,7 @@ export default function App() {
                 console.log("Error Fetching Member Data: ", error);
             }
         })();
-    }, [url])
+    }, [])
 
     return (
         <BlogsProvider>
