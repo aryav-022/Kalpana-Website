@@ -7,6 +7,7 @@ import Footer from "./Components/Footer-new";
 import { Home, Team, Achievements, Blogs, Sponsors } from "./Pages";
 import BlogArticle from "./Pages/Blogs/BlogArticle";
 import BlogsProvider from "./contexts/BlogsProvider";
+import AchievementsContextProvider from "./contexts/achievementsContext";
 
 
 export default function App() {
@@ -22,21 +23,22 @@ export default function App() {
     }, [])
     return (
         <BlogsProvider>
-            <div className="App">
-                <BrowserRouter>
-                    <Navbar />
-                    <Routes>
-                        <Route path="/" element={<Home memberData={memberData}/>} />
-                        <Route path="/team" element={<Team memberData={memberData}/>} />
-                        <Route path="/achievements" element={<Achievements />} />
-                        <Route path="/blogs" element={<Blogs />} />
-                        <Route path="/blogs/:id" element={<BlogArticle />} />
-                        <Route path="/sponsors" element={<Sponsors />} />
-                        <Route path="*" element={<Navigate to="/" replace={true} />} />
-                    </Routes>
-                    <Footer />
-                </BrowserRouter>
-            </div>
+            <AchievementsContextProvider>
+              <div className="App">
+                  <BrowserRouter>
+                      <Navbar />
+                      <Routes>
+                          <Route path="/" element={<Home memberData={memberData}/>} />
+                          <Route path="/team" element={<Team memberData={memberData}/>} />
+                          <Route path="/achievements" element={<Achievements />} />
+                          <Route path="/blogs" element={<Blogs />} />
+                          <Route path="/blogs/:id" element={<BlogArticle />} />
+                          <Route path="/sponsors" element={<Sponsors />} />
+                          <Route path="*" element={<Navigate to="/" replace={true} />} />
+                      </Routes>
+                      <Footer />
+                  </BrowserRouter>
+              </div>
+           </AchievementsContextProvider>
         </BlogsProvider>
     );
-}
