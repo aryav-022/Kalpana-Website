@@ -1,7 +1,13 @@
 import styles from './Achievements.module.css';
 
 const AchievementCard = (props) => {
-    const img = require(`../../Assets/Images/img/${props.img}`);
+    const fallback_img = require(`../../Assets/Images/img/image.png`);
+    const addDefaultSrc = (ev) => {
+        ev.target.src = fallback_img;
+    }
+
+    const img = (`${props.img}`)
+
     return ( 
         <div className={styles.achCardBox}>
             <div className={styles.achCardContent}>
@@ -12,7 +18,7 @@ const AchievementCard = (props) => {
                 </p>
             </div>
             <div className={styles.achCardCover}>
-                <img src={img} alt="" />
+                <img onError={addDefaultSrc} src={img} alt="" />
                 <p>{props.Achievement.coverheadline}</p>
             </div>
         </div>
