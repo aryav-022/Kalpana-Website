@@ -11,12 +11,11 @@ import AchievementsContextProvider from "./contexts/achievementsContext";
 
 export default function App() {
     const [memberData,setMemberData] = useState([]);
-    const url = process.env.REACT_APP_API_URL
 
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(process.env.REACT_APP_API_URL);
+                const res = await fetch("https://script.google.com/macros/s/AKfycbwq8MvWGenqPfRH9lDVHSuS4J0jxulkN6-es8uWU_JlZLmBbIPYRfl4cRSD_MqQKpw6ng/exec");
                 const data = await res.json();
                 setMemberData(data);
             } catch (error) {
