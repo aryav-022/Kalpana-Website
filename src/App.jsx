@@ -13,13 +13,15 @@ export default function App() {
     const [memberData,setMemberData] = useState([]);
     const url = process.env.REACT_APP_API_URL
     console.log(url)
+
     useEffect(() => {
     axios.get(url).then((response) =>{
       setMemberData(response.data)
     }).catch((error) => {
       console.log(error)
     })
-    }, [])
+    }, [url])
+
     return (
         <BlogsProvider>
             <div className="App">
