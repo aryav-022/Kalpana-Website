@@ -8,6 +8,9 @@
 
 #achSection {
     padding-bottom: 5em;
+    margin: 0 auto;
+    width: min(95%, 85rem);
+    /* color: var(--text-dark); */
 }
 
 #achSectionContainer {
@@ -19,6 +22,7 @@
 .achCardBox {
     padding-top: 5em;
     display: flex;
+    color: #1A1A1A;
     justify-content: space-between;
 }
 

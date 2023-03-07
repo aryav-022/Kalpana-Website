@@ -9,12 +9,12 @@ a {
     text-decoration: none;
 }
 
-body {
+/* body {
     background-color: var(--secondary-dark-color);
     color: var(--text-dark);
-}
+} */
 
-section {
+.banner {
     /* background-color: var(--accent-light); */
     margin: 0 auto;
     width: min(95%, 85rem);
@@ -181,12 +181,10 @@ section {
 
 @media only screen and (max-width: 700px) {
     
-    #banner{
-        text-align: center;
-    }
 
     .bannerContainer {
         padding: 3em 0;
+        text-align: center;
         flex-direction: column-reverse;
         justify-content: space-evenly;
         width: 100%;

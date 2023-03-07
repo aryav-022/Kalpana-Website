@@ -1,3 +1,4 @@
+import styles from './Achievements.module.css';
 import { motion } from "framer-motion";
 
 const AchievementCard = (props) => {
