@@ -9,7 +9,7 @@ export default function Index({memberData}) {
 
   const leadArr = [18,20,13]
   const jexec_0 = [0,2,5]
-  const jexec_1 = [10,15]
+  const jexec_1 = [10,15,21]
   const cansat = [17,14]
   const ssc = [4,7]
   const elecDepat = [16,6]
